@@ -345,6 +345,9 @@ ul {
         background-position: center;
         background-color: #f3f3f5;
     }
+     .header-menu ul li a:hover {
+        color: #ff7f50; /* Adjust color as needed */
+    }
     .main-navigation .menu li {
         display: block;
         float: none;
