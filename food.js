@@ -28,7 +28,7 @@ $(document).ready(function ($) {
             el: ".swiper-pagination",
             clickable: true,
         },
-    });
+
         });
     $('.dish-add-btn').click(function () {
         var dishId = $(this).data('dish-id');
