@@ -28,7 +28,7 @@ $(document).ready(function ($) {
             el: ".swiper-pagination",
             clickable: true,
         },
-        
+    });
         });
     $('.dish-add-btn').click(function () {
         var dishId = $(this).data('dish-id');
@@ -88,7 +88,6 @@ $(document).ready(function ($) {
 
     var scene = $(".js-parallax-scene").get(0);
     var parallaxInstance = new Parallax(scene);
-    
 
 $('a[href^="#"]').on('click', function (event) {
     event.preventDefault();
