@@ -29,7 +29,14 @@ $(document).ready(function ($) {
             clickable: true,
         },
     });
-
+        });
+    $('.dish-add-btn').click(function () {
+        var dishId = $(this).data('dish-id');
+        var countElement = $('.dish-count[data-dish-id="' + dishId + '"]');
+        var count = parseInt(countElement.text(), 10);
+        count++;
+        countElement.text(count);
+    });
   
     jQuery(".filters").on("click", function () {
         jQuery("#menu-dish").removeClass("bydefault_show");
