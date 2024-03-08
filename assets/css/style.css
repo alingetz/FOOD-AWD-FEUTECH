@@ -808,6 +808,137 @@ p {
 
 /* ****************** */
 
+.dish .dist-bottom-row .popup-btn{
+    z-index: 2;
+    color: #fff;
+    background: #555;
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.popup-view{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.popup-view.active{
+    opacity: 1;
+    visibility: visible;
+}
+.popup-card{
+    position: relative;
+    display: flex;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.popup-card .product-img{
+    z-index: 2;
+    background: #ffbc00;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 90%;
+    transform: translateY(25px);
+    border-top-left-radius: 10px;
+}
+
+.popup-card .product-img img{
+    z-index: 2;
+    position: relative;
+    width: 350px;
+    height: 70%;
+    border-radius: 5px;
+    left: 0px;
+}
+
+.popup-card .info{
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.popup-card .close-btn{
+    color: #555;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.popup-card .info h2{
+    font-size: 40px;
+    line-height: 20px;
+    margin: 10px;
+}
+
+.popup-card .info h2 span{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.popup-card .info p{
+    font-size: 15px;
+    margin: 10px;
+}
+
+.popup-card .info .price{
+    font-size: 45px;
+    font-weight: 300;
+    margin: 10px;
+}
+
+.popup-card .info .add-cart-btn{
+    color: #fff;
+    background: #009DD2;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px auto;
+    padding: 10px 50px;
+    border-radius: 20px;
+}
+
+.popup-card .info .add-wish{
+    color: #009DD2;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
 
 /* *********** */
 
