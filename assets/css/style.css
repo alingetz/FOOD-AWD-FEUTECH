@@ -670,7 +670,7 @@ p {
     background: linear-gradient(145deg, #ececec, #ffffff);
     box-shadow: 28px 28px 45px #d4d4d4, -28px -28px 45px #ffffff;
     display: flow-root;
-    padding: 0 30px 40px;
+    padding: 0 30px 90px;
     padding-top: 0;
     margin: 130px 0 30px;
     transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
@@ -807,6 +807,148 @@ p {
 }
 
 /* ****************** */
+
+.popup-btn{
+    z-index: 2;
+    color: #fff;
+    background: #d6a029;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: inset;
+}
+
+
+.popup-view{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.popup-view.active{
+    opacity: 10;
+    visibility: visible;
+}
+.popup-card{
+    position: inherit;
+    display: flex;
+    width: 800px;
+    height: 500px;
+    margin: 100px;
+    border-radius: 50px;
+    box-shadow: 28px 28px 45px #d4d4d4, -28px -28px 45px #ffffff;
+}
+
+.popup-card .product-img{
+    z-index: 2;
+    background: #ffbc00;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transform: translateY(25px);
+    border-top-left-radius: 50px;
+    box-shadow: 28px 28px 45px #d4d4d4, -28px -28px 45px #ffffff;
+}
+
+.popup-card .product-img img{
+    z-index: 2;
+    position: relative;
+    width: 350px;
+    height: 70%;
+    border-radius: 5px;
+    left: 0px;
+}
+
+.popup-card .info{
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.popup-card .close-btn{
+    color: #555;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.popup-card .info h2{
+    font-size: 40px;
+    line-height: 20px;
+    margin: 10px;
+}
+
+.popup-card .info h2 span{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.popup-card .info p{
+    font-size: 15px;
+    margin: 10px;
+}
+
+.popup-card .info .price{
+    font-size: 45px;
+    font-weight: 900;
+    margin: 10px;
+}
+
+.popup-card .info .add-cart-btn {
+    color: #fff;
+    background: #009DD2;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px auto;
+    padding: 10px 50px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-card .info .add-cart-btn:hover {
+    background-color: #0077A8;
+}
+
+.popup-card .info .add-wish{
+    color: #009DD2;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 
 
 /* *********** */
@@ -1082,6 +1224,70 @@ p {
         font-size: 18px;
         line-height: 28px;
     }
+}
+
+
+@media (max-width: 900px){
+    .popup-card{
+        flex-direction: column;
+        width: 550px;
+        height: auto;
+    }
+
+    .popup-card .product-img{
+        z-index: 3;
+        width: 100%;
+        height: 200px;
+        transform: translateY(0);
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+    .popup-card .product-img img{
+        left: initial;
+        max-width: 100%;
+    }
+
+    .popup-card .info{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .popup-card .info h2{
+        margin: 20px 5px 5px 5px;
+        font-size: 25px;
+    }
+
+    .popup-card .info h2 span{
+        font-size: 10px;
+    }
+
+    .popup-card .info p{
+        margin: 5px;
+        font-size: 30px;
+    }
+
+    .popup-card .info .add-cart-btn{
+        margin: 5px auto;
+        padding: 5px 40px;
+        font-size: 14px;
+    }
+
+    .popup-card .info .add-wish{
+        font-size: 14px;
+    }
+
+    .product .popup-card .info .close-btn{
+        z-index: 4;
+    }
+}.product .popup-card .info .add-cart-btn:hover {
+    box-shadow: 0 0 1px #009DD2, 0 0 20px #009DD2;
+    opacity: 0.9;
+    transition: 0.2s;
 }
 
 
